@@ -18,8 +18,6 @@ public class ProductDAOImp implements ProductDAO {
 
 	@Override
 	public void save(Product product) {
-
-		
 	       em.persist(product);
 	        
 	}

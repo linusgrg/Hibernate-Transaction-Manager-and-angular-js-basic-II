@@ -22,14 +22,12 @@ public class ProductController {
 
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Product product) {
-
 		return "product";
 	}
 
 	@RequestMapping(value = "/product", method = RequestMethod.POST)
 	@ResponseBody
 	public Product save(@RequestBody Product product) {
-		
 		productService.saveProduct(product);
 		
 		return product;
@@ -71,10 +69,6 @@ public class ProductController {
 		productService.updateProduct(product);
 		System.out.println("hello");
 		return product;
-	}
-	
-	
-	
-	
+	}	
 	
 }

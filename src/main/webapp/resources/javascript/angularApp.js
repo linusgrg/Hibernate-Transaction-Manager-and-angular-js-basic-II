@@ -26,11 +26,12 @@ myApp.controller('productController', [ '$scope', '$http',
 		function($scope, $http) {
 
 			$scope.submitForm = function() {
-
+				//console.log($scope.Product)
 				$http.post('product', $scope.Product)
 
 				.success(function(data) {
 					$scope.Product = {};
+					//console.log(JSON.stringify(data));
 					alert(data.name);
 					alert("inserted successfully");
 
@@ -49,6 +50,7 @@ myApp.controller("myController", function($scope) {
 myApp.controller("displayController", [ '$scope', '$http','$location',
 		function($scope, $http , $location) {
 			$http.get('displayInfo').success(function(data) {
+				console.log(JSON.stringify(data))
 				$scope.product = data;
 			});
 
