@@ -29,7 +29,6 @@ public class ProductController {
 	@RequestMapping(value = "/product", method = RequestMethod.POST)
 	@ResponseBody
 	public Product save(@RequestBody Product product) {
-		
 		System.out.println("change on different place");
 		productService.saveProduct(product);
 		
@@ -39,7 +38,7 @@ public class ProductController {
 	@RequestMapping(value="/displayInfo")
 	@ResponseBody 
 	public List<Product> displayList(){
-		
+		System.out.println("list all the product");
 		return productService.getAllProduct();
 		
 	}
@@ -75,8 +74,7 @@ public class ProductController {
 	}
 	
 	
-	
-	//method done in master
+//method done in master
 	@RequestMapping(value = "/product1", method = RequestMethod.PUT)
 	@ResponseBody
 	public Product update1(@RequestBody Product product) {
@@ -85,5 +83,4 @@ public class ProductController {
 		System.out.println("hello1");
 		return product;
 	}
-	
 }
