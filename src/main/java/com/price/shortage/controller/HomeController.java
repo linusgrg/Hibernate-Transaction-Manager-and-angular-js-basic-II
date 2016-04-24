@@ -40,4 +40,9 @@ public class HomeController {
 		return "sunil";
 	}
 	
+	@RequestMapping(value="/sunilg")
+	public String sunil1(){
+		return "sunil";
+	}
+	
 }
