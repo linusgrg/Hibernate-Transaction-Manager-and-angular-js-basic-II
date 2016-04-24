@@ -35,5 +35,9 @@ public class HomeController {
 		
 		return "home";
 	}
+	@RequestMapping(value="/sunil")
+	public String sunil(){
+		return "sunil";
+	}
 	
 }
