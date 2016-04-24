@@ -22,7 +22,7 @@ public class ProductController {
 
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Product product) {
-		System.out.println("hello change in master");
+		System.out.println("i change");
 		return "product";
 	}
 
@@ -85,6 +85,11 @@ public class ProductController {
 	}
 	
 	public void change(){
-		System.out.println("hello last");
+		System.out.println("no conflict");
+		System.out.println("hello lastghh");
+	}
+	
+	public void change2(){
+		System.out.println("ok");
 	}
 }
