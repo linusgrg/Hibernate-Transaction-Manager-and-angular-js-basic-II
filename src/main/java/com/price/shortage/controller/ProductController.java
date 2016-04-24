@@ -72,6 +72,18 @@ public class ProductController {
 		productService.updateProduct(product);
 		System.out.println("hello");
 		return product;
-	}	
+	}
+	
+	
+	
+	//method done in master
+	@RequestMapping(value = "/product1", method = RequestMethod.PUT)
+	@ResponseBody
+	public Product update(@RequestBody Product product) {
+		System.out.println("hello1");
+		productService.updateProduct(product);
+		System.out.println("hello1");
+		return product;
+	}
 	
 }
