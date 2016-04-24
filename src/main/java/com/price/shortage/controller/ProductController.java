@@ -22,13 +22,15 @@ public class ProductController {
 
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Product product) {
-		system.out.println("hello change in master");
+		System.out.println("hello change in master");
 		return "product";
 	}
 
 	@RequestMapping(value = "/product", method = RequestMethod.POST)
 	@ResponseBody
 	public Product save(@RequestBody Product product) {
+		
+		System.out.println("change on different place");
 		productService.saveProduct(product);
 		
 		return product;
