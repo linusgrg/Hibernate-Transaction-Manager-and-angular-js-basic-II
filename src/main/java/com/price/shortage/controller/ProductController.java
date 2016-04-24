@@ -22,6 +22,7 @@ public class ProductController {
 
 	@RequestMapping(value = "/product", method = RequestMethod.GET)
 	public String product(Product product) {
+		system.out.println("hello change in master");
 		return "product";
 	}
 
