@@ -83,4 +83,8 @@ public class ProductController {
 		System.out.println("hello1");
 		return product;
 	}
+	
+	public void change(){
+		System.out.println("hello last");
+	}
 }
